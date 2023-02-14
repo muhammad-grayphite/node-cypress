@@ -26,6 +26,10 @@ app.post('/cypress',(req,res)=>{
  
 })
 
+app.get('/',(req,res)=>{
+  res.send('Server is running')
+})
+
 server.listen(8000, (req, res) => {
   console.log(`Server active on http://localhost:8000!`);
 });
