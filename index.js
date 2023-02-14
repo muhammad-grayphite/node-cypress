@@ -8,8 +8,6 @@ const server = http.createServer(app);
 app.use(express.json());
 
 
-
-
 app.post('/cypress',(req,res)=>{
     cypress
   .run({ 
@@ -23,7 +21,7 @@ app.post('/cypress',(req,res)=>{
     res.send(results)
   })
   .catch((err) => {
-    res.send("Error meassage will")
+    res.send(`Error : ${err}`)
   })
  
 })
