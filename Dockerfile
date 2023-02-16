@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:14.15.4 as base
+FROM cypress/browsers:node14.16.0-chrome90-ff88 as base
 
 WORKDIR /code
 
@@ -13,4 +13,4 @@ COPY . .
 
 RUN npm ci
 COPY . .
-CMD [ "node", "index.js", "--host", "0.0.0.0", "--port", "8000"]
+CMD [ "node", "index.js"]
