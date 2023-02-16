@@ -9,6 +9,7 @@ app.use(express.json());
 
 
 app.post('/cypress',(req,res)=>{
+  console.log('starting test script')
     cypress
   .run({ 
     spec: './cypress/e2e/Site-load-test/site-load-issue.cy.js',
@@ -21,6 +22,7 @@ app.post('/cypress',(req,res)=>{
     res.send(results)
   })
   .catch((err) => {
+    console.log(`err: ${err}`)
     res.send(`Error : ${err}`)
   })
  
