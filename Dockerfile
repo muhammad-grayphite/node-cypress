@@ -11,4 +11,4 @@ COPY . .
 
 RUN npm ci
 COPY . .
-CMD [ "node", "index.js" ]
+CMD [ "node", "index.js", "--host", "0.0.0.0", "--port", "8000"]
