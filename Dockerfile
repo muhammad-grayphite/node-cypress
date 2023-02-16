@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 
-FROM node:18.13.0
+FROM node:12.18.1
 ENV NODE_ENV=production
 
-WORKDIR /
+WORKDIR /app
 
 COPY ["package.json", "package-lock.json*", "./"]
 
