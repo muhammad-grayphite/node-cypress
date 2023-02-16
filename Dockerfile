@@ -6,6 +6,8 @@ WORKDIR /code
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 
+EXPOSE 8000
+
 RUN npm install
 COPY . .
 
