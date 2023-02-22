@@ -16,7 +16,7 @@ function runTests() {
 }
 
 var job = new CronJob(
-	'00 20 06 * * *',
+	'00 45 06 * * *',
 	function() {
 		runTests()
 	},

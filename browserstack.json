@@ -1,7 +1,7 @@
 {
     "auth": {
-        "username": "grayphitelahore_sHiQND",
-        "access_key": "KysFpDApfxzL6p3Fo1ps"
+        "username": "muhammadbilal_iP6Yxb",
+        "access_key": "ssC8qADAyUDF2mHP517F"
     },
     "browsers": [
         {
@@ -50,7 +50,7 @@
             "cypress": "^10.11.0",
             "jsdom": "^20.0.2"
         },
-        "callback_url": "https://9038ec9f83c59e8c23a0eb492edd724a.m.pipedream.net"
+        "callback_url": "https://hooks.slack.com/services/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"
     },
     "disable_usage_reporting": false
 }
