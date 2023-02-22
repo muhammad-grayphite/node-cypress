@@ -6,8 +6,24 @@ const cypress = require('cypress');
 const { send } = require("process");
 const server = http.createServer(app);
 app.use(express.json());
+var CronJob = require('cron').CronJob;
 
 const execSync = require('child_process').execSync;
+
+function runTests() {
+  const output = execSync('npx browserstack-cypress run', { encoding: 'utf-8' });
+  console.log('Output was:\n', output);
+}
+
+var job = new CronJob(
+	'* */10 * * * *',
+	function() {
+		runTests()
+	},
+	null,
+	true,
+	'America/Los_Angeles'
+);
 
 
 app.post('/cypress',(req,res)=>{
@@ -45,6 +61,7 @@ app.post('/cypress/browserstack',(req,res)=>{
 
   const output = execSync('npx browserstack-cypress run', { encoding: 'utf-8' });
   console.log('Output was:\n', output);
+  res.send(output)
   
 })
 
