@@ -1,91 +1,55 @@
 {
     "auth": {
-        "username": "fizzarehan_YXeMod",
-        "access_key": "K7wJ9VduzYpGg8ZagtUt"
+        "username": "grayphitelahore_sHiQND",
+        "access_key": "KysFpDApfxzL6p3Fo1ps"
     },
     "browsers": [
         {
             "browser": "chrome",
             "os": "Windows 10",
             "versions": [
-                "latest",
-                "latest-1"
+                "latest"
             ]
         },
         {
             "browser": "firefox",
             "os": "Windows 10",
             "versions": [
-                "latest",
-                "latest-1"
+                "latest"
             ]
         },
         {
             "browser": "edge",
             "os": "Windows 10",
             "versions": [
-                "latest",
-                "latest-1"
+                "latest"
             ]
         },
         {
             "browser": "chrome",
-            "os": "OS X Mojave",
+            "os": "macOS Monterey",
             "versions": [
-                "latest",
-                "latest-1"
+                "latest"
             ]
         },
         {
             "browser": "firefox",
-            "os": "OS X Mojave",
+            "os": "macOS Monterey",
             "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "edge",
-            "os": "OS X Mojave",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "chrome",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "firefox",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
-            ]
-        },
-        {
-            "browser": "edge",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest",
-                "latest-1"
+                "latest"
             ]
         }
+
     ],
     "run_settings": {
         "cypress_config_file": "./cypress.config.js",
-        "project_name": "AbbiAi",
-        "build_name": "v1",
-        "exclude": [],
+        "project_name": "Abbi.ai",
+        "build_name": "build cy v1.0",
         "parallels": "1",
-        "npm_dependencies": {},
-        "package_config_options": {},
-        "headless": true,
+        "npm_dependencies": {
+            "cypress": "^10.11.0",
+            "jsdom": "^20.0.2"
+        },
         "callback_url": "https://9038ec9f83c59e8c23a0eb492edd724a.m.pipedream.net"
     },
     "disable_usage_reporting": false

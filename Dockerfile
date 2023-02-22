@@ -13,5 +13,5 @@ COPY . .
 
 RUN npm ci
 COPY . .
-RUN npx browserstack-cypress run
+# RUN npx browserstack-cypress run
 CMD [ "node", "index.js"]

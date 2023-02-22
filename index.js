@@ -7,6 +7,8 @@ const { send } = require("process");
 const server = http.createServer(app);
 app.use(express.json());
 
+const execSync = require('child_process').execSync;
+
 
 app.post('/cypress',(req,res)=>{
   console.log('starting test script')
@@ -28,6 +30,24 @@ app.post('/cypress',(req,res)=>{
  
 })
 
+app.post('/cypress/browserstack',(req,res)=>{
+  console.log('starting test script browserstack')
+
+  // browserstackRunner.run(config, function(error, report) {
+  //   if (error) {
+  //     console.log("Error:" + error);
+  //     res.send("Error:" + error);
+  //   }
+  //   console.log(report);
+  //   console.log("Test Finished");
+  //   res.send(JSON.stringify(report, null, 2))
+  // });
+
+  const output = execSync('npx browserstack-cypress run', { encoding: 'utf-8' });
+  console.log('Output was:\n', output);
+  
+})
+
 app.get('/',(req,res)=>{
   res.send('Server is running')
 })
@@ -35,4 +55,5 @@ app.get('/',(req,res)=>{
 server.listen(8000, (req, res) => {
   console.log(`Server active on http://localhost:8000!`);
 });
+server.setTimeout(1000000)
 module.exports=server;
