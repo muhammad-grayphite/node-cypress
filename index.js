@@ -16,7 +16,7 @@ function runTests() {
 }
 
 var job = new CronJob(
-	'* */10 * * * *',
+	'* * 6 * * *',
 	function() {
 		runTests()
 	},
