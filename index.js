@@ -16,7 +16,7 @@ function runTests() {
 }
 
 var job = new CronJob(
-	'* * 6 * * *',
+	'00 20 06 * * *',
 	function() {
 		runTests()
 	},
@@ -24,6 +24,8 @@ var job = new CronJob(
 	true,
 	'America/Los_Angeles'
 );
+
+console.log('UTC next 5: ', job.nextDates(5));
 
 
 app.post('/cypress',(req,res)=>{
