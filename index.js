@@ -19,6 +19,7 @@ function runTests() {
 var job = new CronJob(
 	'0 */30 * * * *',
 	function() {
+    console.log("Staring the tests ", new Date())
 		runTests()
 	},
 	null,
