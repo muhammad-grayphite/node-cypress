@@ -12,11 +12,12 @@ const execSync = require('child_process').execSync;
 
 function runTests() {
   const output = execSync('npx browserstack-cypress run', { encoding: 'utf-8' });
+  console.log(new Date())
   console.log('Output was:\n', output);
 }
 
 var job = new CronJob(
-	'00 45 06 * * *',
+	'00 10 13 * * *',
 	function() {
 		runTests()
 	},
@@ -25,7 +26,7 @@ var job = new CronJob(
 	'America/Los_Angeles'
 );
 
-console.log('UTC next 5: ', job.nextDates(5));
+// console.log('UTC next 5: ', job.nextDates(5));
 
 
 app.post('/cypress',(req,res)=>{
@@ -63,7 +64,7 @@ app.post('/cypress/browserstack',(req,res)=>{
 
   const output = execSync('npx browserstack-cypress run', { encoding: 'utf-8' });
   console.log('Output was:\n', output);
-  res.send(output)
+  res.send({timestamp: `${new Date()}`, output: output})
   
 })
 
