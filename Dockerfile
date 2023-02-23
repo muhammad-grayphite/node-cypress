@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM cypress/browsers:node14.16.0-chrome90-ff88 as base
+FROM cypress/base:18.14.1 as base
 
 WORKDIR /code
 
