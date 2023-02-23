@@ -1,7 +1,7 @@
 import urls from '../../fixtures/urls.json'
 describe('check site load issue', () => {
 
-  urls.slice.forEach((url) => {
+  urls.forEach((url) => {
     it(url,()=>{
         cy.wait(2000);
         let site ='https://'+url;
