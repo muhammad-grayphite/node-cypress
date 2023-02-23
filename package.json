@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "yarn install --frozen-lockfile & node index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
