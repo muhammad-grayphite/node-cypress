@@ -26,7 +26,7 @@ var job = new CronJob(
 	'America/Los_Angeles'
 );
 
-// console.log('UTC next 5: ', job.nextDates(5));
+console.log('UTC next 5: ', job.nextDates(5));
 
 
 app.post('/cypress',(req,res)=>{
